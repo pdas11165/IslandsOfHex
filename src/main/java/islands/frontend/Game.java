@@ -178,7 +178,7 @@ public class Game extends JPanel implements GameController.ViewDelegate {
      * @param g graphics
      */
     private void drawBoard(Graphics g) {
-        g.setColor(new Color(0x33cccc));
+        g.setColor(new Color(0x7DCC33));
         g.fillRect(0,0, BOARD_WIDTH, BOARD_HEIGHT);
     }
 

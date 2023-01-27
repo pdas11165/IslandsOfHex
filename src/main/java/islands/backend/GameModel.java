@@ -5,6 +5,8 @@ package islands.backend;
  *
  */
 public class GameModel {
+    Integer[][] playboard;
+    public int size;
 
     public static final boolean WHITE = true;
     public static final boolean BLACK = false;
@@ -14,6 +16,9 @@ public class GameModel {
      * @param sz the square size of the board
      */
     public GameModel(int sz) {
+        this.size = sz;
+        playboard = new Integer[sz][sz];
+
 
     }
 
@@ -25,8 +30,16 @@ public class GameModel {
      * @throws IllegalArgumentException for invalid row and col
      */
     public boolean canPlay(int row, int col) {
-        return true;
+        if(row < 0|| row >= playboard.length|| col < 0|| col >= playboard.length){
+            throw new IllegalArgumentException("Invalid Row or Column");
+        }
+        if (playboard[row][col] == null){
+            playboard[row][col] = 1;
+            return true;
+        }
+        else return false;
     }
+
 
     /**
      * play a piece and report if the game is over (true) false, otherwise

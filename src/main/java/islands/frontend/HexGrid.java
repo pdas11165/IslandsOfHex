@@ -42,7 +42,7 @@ public class HexGrid extends JComponent{
             for(int row = 0; row < size; row++) {
                 int columnY = y + row * (Hexagon.hexagonLength) * 2;
 
-                hexagons[row][col] = new Hexagon(x, columnY, Color.LIGHT_GRAY);
+                hexagons[row][col] = new Hexagon(x, columnY, Color.YELLOW);
             }
         }
     }
